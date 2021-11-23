@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script language="javascript">
+        function showDate(){
+            var time=new Date(); //날짜와 시간 정보 객체 생성
+            
+            var nowTime=
+            time.getFullYear()+"년"+(time.getMonth()+1)+"월" + time.getDate()+"일"+
+            time.getHours()+"시"+time.getMinutes()+"분"+time.getSeconds()+"초";
+            
+            var span=document.getElementById("today");
+            span.innerHTML=nowTime;
+        }
+    </script>
+    
+    <title>certificate userInfo</title>
+</head>
+<h2> 인증서 개인정보 등록</h2>
+<body onload="showDate()">
+    <form action="./info.do" method="post">
+        이름  : <input id='username' type='text'/> <br>
+        생년월일(8자리)  :<input id='userbirth' type='text' maxlength='8'/><br>
+        <!-- 타임스탬프  :<br><input type="button" value="현재시간" onclick="showDate()"/>
+        <span id ="today"></span> <br> -->
+                            
+
+<br><br>
+        <input type='submit' value='정보등록'>
+    </form> 
+</body>
+</html>
